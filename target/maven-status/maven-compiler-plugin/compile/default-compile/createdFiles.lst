@@ -1,7 +1,9 @@
+com\NDSU\finalproject\ui\LoginFrame.class
 com\NDSU\finalproject\dao\AnswerOptionDAO.class
 com\NDSU\finalproject\model\Question.class
 com\NDSU\finalproject\model\TestAssignment.class
 com\NDSU\finalproject\model\AnswerOption.class
+com\NDSU\finalproject\ui\RegisterFrame.class
 com\NDSU\finalproject\dao\TestAssignmentDAO.class
 com\NDSU\finalproject\dao\QuestionDAO.class
 com\NDSU\finalproject\model\TestTaken.class

@@ -2,6 +2,7 @@ package com.NDSU.finalproject;
 
 import com.NDSU.finalproject.model.*;
 import com.NDSU.finalproject.dao.*;
+import com.NDSU.finalproject.ui.*;
 
 import java.time.LocalDate;
 
@@ -17,19 +18,28 @@ public class Main {
             System.out.println("Connected successfully!");
         } 
         catch (Exception e) {
-            e.printStackTrace();
         }
         
-        User testUser = new User(1, "Username", "Password", "FirstName", "LastName", "Email", true);
-        System.out.println(testUser.toString());
         
-        Test testTest = new Test(1, "TestName", 1, LocalDate.now());
-        System.out.println(testTest.toString());
         
-        Question testQuestion = new Question(1, "1.) Is this a test question?", "Written response");
-        System.out.println(testQuestion.toString());
+        //Testing
+        /*
+        User testCreateUser = new User("NoahNSchamp", "pass123", "Noah", "Schamp", "NoahSchamp@ndsu.edu", true);
+        User testReadUser = new User();
+        UserDAO dao = new UserDAO();
         
-        TestAssignment testTestAssignment = new TestAssignment(1, 1, LocalDate.now(), LocalDate.now());
-        System.out.println(testTestAssignment.toString());
+        try{
+            dao.addUser(testCreateUser);
+            testReadUser = dao.getUserByFullName("Noah", "Schamp");
+            System.out.println(testReadUser.toString());
+        }
+        catch (Exception e) {
+            System.out.println("Error getting User!");
+            e.printStackTrace();
+        }
+        */
+        
+         new LoginFrame();
+
     }   
 }

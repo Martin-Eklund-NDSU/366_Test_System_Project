@@ -16,6 +16,12 @@ public class Test {
     public Test() {
     }
     
+    public Test(String title, int createdBy, LocalDate dateCreated) {
+        this.title = title;
+        this.createdBy = createdBy;
+        this.dateCreated = dateCreated;
+    }
+    
     public Test(int testId, String title, int createdBy, LocalDate dateCreated) {
         this.testId = testId;
         this.title = title;

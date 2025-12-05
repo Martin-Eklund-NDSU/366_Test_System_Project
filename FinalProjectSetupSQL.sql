@@ -2,8 +2,8 @@
 -- Set-up Script
 
 --Un-comment to run certain sections
-/*
 
+/*
 CREATE TABLE IF NOT EXISTS account (
     user_id SERIAL PRIMARY KEY,
     username VARCHAR(64) UNIQUE NOT NULL,
@@ -59,20 +59,19 @@ CREATE TABLE IF NOT EXISTS test_assignment (
 CREATE TABLE IF NOT EXISTS test_taken (
     user_id INT NOT NULL,
     test_id INT NOT NULL,
-    date_taken DATE NOT NULL DEFAULT CURRENT_DATE,
+    date_taken DATE DEFAULT CURRENT_DATE,
     time_taken INT,	-- Minutes
     overall_score NUMERIC(4,1),
-    PRIMARY KEY (user_id, test_id, date_taken),
+    PRIMARY KEY (user_id, test_id),
     FOREIGN KEY (user_id) REFERENCES account (user_id),
     FOREIGN KEY (test_id) REFERENCES test (test_id)
 );
 
-*/
+
 
 -----------------------------------------------------
 -- Test Data
 
-/*
 
 INSERT INTO account (username, user_password, email, firstname, is_admin)
 VALUES
@@ -122,12 +121,12 @@ INSERT INTO test_taken (user_id, test_id, time_taken, overall_score)
 VALUES
 (2, 1, 5, 100);
 
-*/
+
 
 -----------------------------------------------------
 -- Test View
 
-/*
+
 
 CREATE VIEW view_assigned_tests AS
 SELECT 
@@ -142,6 +141,7 @@ FROM test_assignment ta
 JOIN account u ON ta.user_id = u.user_id
 JOIN test t ON ta.test_id = t.test_id;
 
-SELECT * FROM view_assigned_tests;
-
 */
+
+SELECT * FROM account;
+

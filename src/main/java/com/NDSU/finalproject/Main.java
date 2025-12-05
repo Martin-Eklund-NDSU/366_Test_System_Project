@@ -18,6 +18,7 @@ public class Main {
             System.out.println("Connected successfully!");
         } 
         catch (Exception e) {
+            e.printStackTrace();
         }
         
         
@@ -39,7 +40,7 @@ public class Main {
         }
         */
         
-         new LoginFrame();
+        new LoginFrame();
 
     }   
 }

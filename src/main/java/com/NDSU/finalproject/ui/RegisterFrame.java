@@ -7,7 +7,10 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- *
+ * TODO: 
+ *  - Add input sanitization
+ *  - Add duplicate detection
+ *  - Add more error handling overall
  * @author Noah Schamp
  */
 public class RegisterFrame extends JFrame {
